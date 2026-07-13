@@ -1,1 +1,6 @@
-# witness-spec\n\nStatus: Draft\nLicense: CC BY 4.0\n\nSpecification coming soon.
+# witness-spec
+
+Status: Draft
+License: CC BY 4.0
+
+Specification coming soon.
