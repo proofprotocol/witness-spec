@@ -109,7 +109,7 @@ AgenTwin™ is the automated witness layer for continuous agent behavioral attes
 - It assembles ProofBundles from receipts, pubkeys, and verifier outputs
 - It produces a machine-generated witness attestation record for each bundle
 
-AgenTwin™ automated witness attestation satisfies the witness requirement for T2 trust tier verification under HV-A2P™. T3 ProofStamp™ certification requires a human witness for the initial Certified Run.
+AgenTwin™ automated witness attestation satisfies the witness requirement for T2 trust tier verification under PP-A2P™. T3 ProofStamp™ certification requires a human witness for the initial Certified Run.
 
 ---
 
