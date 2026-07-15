@@ -4,7 +4,7 @@
 **Version:** 0.1 - Draft  
 **Status:** Draft  
 **License:** CC BY 4.0  
-**Maintained by:** Proof Economy Standards Alliance (PESA)  
+**Maintained by:** Proof Economy™ Standards Alliance (PESA)  
 **Repository:** https://github.com/proofprotocol/witness-spec  
 **Published:** 2026-07-13  
 
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-This specification defines the Witness Protocol: the requirements for independent observation and attestation of a Proof Protocol benchmark run. A valid Certified Run requires an independent witness. This specification defines who qualifies as a witness, what they must observe, and what they must attest.
+This specification defines the Witness Protocol: the requirements for independent observation and attestation of a Proof Protocol™ benchmark run. A valid Certified Run requires an independent witness. This specification defines who qualifies as a witness, what they must observe, and what they must attest.
 
 The witness is the answer to the question: who watched the watcher?
 
@@ -30,7 +30,7 @@ Draft. Subject to change before v1.0.
 2. [Witness Eligibility](#2-witness-eligibility)
 3. [Witness Obligations](#3-witness-obligations)
 4. [Witness Attestation Record](#4-witness-attestation-record)
-5. [AgenTwin as Automated Witness](#5-agentwin-as-automated-witness)
+5. [AgenTwin™ as Automated Witness](#5-agentwin-as-automated-witness)
 6. [Disqualifying Conditions](#6-disqualifying-conditions)
 7. [Conformance](#7-conformance)
 8. [Authors](#8-authors)
@@ -57,7 +57,7 @@ A witness must satisfy all of the following:
 - Sufficient technical competence to observe and understand the execution conditions
 - Willing to disclose identity and affiliation in the witness attestation record
 
-HACKERverse serving as witness for a run it administers satisfies the independence requirement provided HACKERverse has no commercial relationship with the vendor under test. HACKERverse's structural independence as a disinterested certifying authority is the foundational moat of the Proof Economy.
+HACKERverse serving as witness for a run it administers satisfies the independence requirement provided HACKERverse has no commercial relationship with the vendor under test. HACKERverse's structural independence as a disinterested certifying authority is the foundational moat of the Proof Economy™.
 
 ---
 
@@ -68,7 +68,7 @@ During a Certified Run the witness must:
 1. Confirm the NIST Beacon pulse used for pre-execution commitment was retrieved before execution began
 2. Confirm the benchmark corpus used matches the declared corpus reference
 3. Observe that the vendor had no access to test cases before the pre-commitment pulse was published
-4. Confirm the execution environment matches the declared posture in the ProofBundle
+4. Confirm the execution environment matches the declared posture in the ProofBundle™
 5. Confirm the verifier was run against the unmodified receipt chain
 6. Sign and submit the witness attestation record
 
@@ -96,20 +96,20 @@ During a Certified Run the witness must:
 }
 ```
 
-The `witness_signature` is optional in v0.1 but required for ProofStamp certification.
+The `witness_signature` is optional in v0.1 but required for ProofStamp™ certification.
 
 ---
 
-## 5. AgenTwin as Automated Witness
+## 5. AgenTwin™ as Automated Witness
 
-AgenTwin is the automated witness layer for continuous agent behavioral attestation. In the context of the Witness Protocol:
+AgenTwin™ is the automated witness layer for continuous agent behavioral attestation. In the context of the Witness Protocol:
 
-- AgenTwin operates outside the agent trust boundary
+- AgenTwin™ operates outside the agent trust boundary
 - It observes agent actions in real time without access to the agent's credentials or signing keys
 - It assembles ProofBundles from receipts, pubkeys, and verifier outputs
 - It produces a machine-generated witness attestation record for each bundle
 
-AgenTwin automated witness attestation satisfies the witness requirement for T2 trust tier verification under HV-A2P. T3 ProofStamp certification requires a human witness for the initial Certified Run.
+AgenTwin™ automated witness attestation satisfies the witness requirement for T2 trust tier verification under HV-A2P™. T3 ProofStamp™ certification requires a human witness for the initial Certified Run.
 
 ---
 
@@ -132,7 +132,7 @@ A Certified Run is conformant with the Witness Protocol if:
 
 - The witness satisfies all eligibility requirements in Section 2
 - The witness fulfilled all obligations in Section 3
-- A complete witness attestation record is included in the ProofBundle
+- A complete witness attestation record is included in the ProofBundle™
 - The witness has no disqualifying conditions under Section 6
 
 ---
