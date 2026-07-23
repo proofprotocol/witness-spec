@@ -1,5 +1,3 @@
-> **Zenodo DOI:** [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780) — Published 2026-07-15
-
 # PP-SPEC-005 · Witness Protocol Specification
 
 **Document ID:** PP-SPEC-005  
@@ -32,7 +30,7 @@ Draft. Subject to change before v1.0.
 2. [Witness Eligibility](#2-witness-eligibility)
 3. [Witness Obligations](#3-witness-obligations)
 4. [Witness Attestation Record](#4-witness-attestation-record)
-5. [AgenTwin™ as Automated Witness](#5-agentwin-as-automated-witness)
+5. [ProofWitness™ as Automated Witness](#5-proofwitness-as-automated-witness)
 6. [Disqualifying Conditions](#6-disqualifying-conditions)
 7. [Conformance](#7-conformance)
 8. [Authors](#8-authors)
@@ -51,15 +49,62 @@ The witness requirement closes this gap. An independent witness observes the exe
 
 ## 2. Witness Eligibility
 
-A witness must satisfy all of the following:
+Witness eligibility is determined by two gates. Both are binary. Failing
+either disqualifies the witness. Neither can be compensated for by the
+other.
 
-- No commercial relationship with the vendor under test at the time of the run
-- No financial interest in the outcome of the run
-- No governance role in any body that sets conformance criteria for the category being tested
-- Sufficient technical competence to observe and understand the execution conditions
-- Willing to disclose identity and affiliation in the witness attestation record
+### 2.1 Gate A - Structural
 
-HACKERverse serving as witness for a run it administers satisfies the independence requirement provided HACKERverse has no commercial relationship with the vendor under test. HACKERverse's structural independence as a disinterested certifying authority is the foundational moat of the Proof Economy™.
+The witness MUST operate outside the trust boundary of the System Under
+Test's operator. The SUT operator MUST NOT be able to configure, disable,
+or silence it.
+
+This is not satisfied by contractual separation, organizational
+separation, process separation, or the absence of a commercial
+relationship. It is satisfied only where the witnessing component is
+architecturally incapable of being controlled by the SUT operator.
+
+### 2.2 Gate B - Disinterest
+
+The witness's economic position MUST be identical whether the resulting
+Report carries proof or not, and regardless of any score that Report
+carries.
+
+- A fixed fee for witnessing is permitted and MUST be disclosed.
+- Equity, resale margin, referral fees, success-contingent pricing, or
+  any benefit that varies with the verdict is disqualifying.
+
+### 2.3 Disclosure Requirements
+
+A witness satisfying both gates MUST additionally disclose in the
+attestation record:
+
+- Identity and affiliation
+- Any commercial relationship with the SUT operator
+- Any governance role in a body that sets conformance criteria for the
+  category being tested
+- Which of the roles defined in the Proof Validity Specification the
+  witness also holds for this run
+
+Disclosure is not a substitute for either gate. A relationship that
+varies compensation with the verdict is disqualifying whether disclosed
+or not.
+
+### 2.4 Residual Trust Declaration
+
+No witness architecture eliminates all trust. Every attestation record
+MUST include a machine-readable declaration of what must still be
+trusted for the proof to hold, including the operator of the witnessing
+component and the operator of the execution environment.
+
+### 2.5 Witness Operating Its Own Execution Environment
+
+A party MAY witness a run it administers where the System Under Test is
+operated by a different party, because the witnessing component sits
+outside the SUT operator's trust boundary.
+
+A party MUST NOT serve as sole witness for any run in which it operates
+or controls the System Under Test.
 
 ---
 
@@ -102,16 +147,16 @@ The `witness_signature` is optional in v0.1 but required for ProofStamp™ certi
 
 ---
 
-## 5. AgenTwin™ as Automated Witness
+## 5. ProofWitness™ as Automated Witness
 
-AgenTwin™ is the automated witness layer for continuous agent behavioral attestation. In the context of the Witness Protocol:
+ProofWitness™ is the automated witness layer for continuous agent behavioral attestation. In the context of the Witness Protocol:
 
-- AgenTwin™ operates outside the agent trust boundary
+- ProofWitness™ operates outside the agent trust boundary
 - It observes agent actions in real time without access to the agent's credentials or signing keys
 - It assembles ProofBundles from receipts, pubkeys, and verifier outputs
 - It produces a machine-generated witness attestation record for each bundle
 
-AgenTwin™ automated witness attestation satisfies the witness requirement for T2 trust tier verification under PP-A2P™. T3 ProofStamp™ certification requires a human witness for the initial Certified Run.
+ProofWitness™ automated witness attestation satisfies the witness requirement for T2 trust tier verification under PP-A2P™. T3 ProofStamp™ certification requires a human witness for the initial Certified Run.
 
 ---
 
